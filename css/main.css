@@ -1,0 +1,238 @@
+/* global */
+
+:root {
+  --primary-color: hsl(171, 66%, 44%);
+  --primary-color-active: hsl(171, 66%, 50%);
+  --secondary-color: hsl(233, 100%, 69%);
+  --secondary-color-active: hsl(233, 100%, 73%);
+  --headers-color: hsl(210, 10%, 33%);
+  --parargraphs-color: hsl(201, 11%, 66%);
+}
+
+::-webkit-scrollbar {
+  width: .5em;
+}
+
+::-webkit-scrollbar-track {
+  background-color: var(--paragraphs-color);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--headers-color);
+}
+
+* {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  border: none;
+  outline: none;
+  box-sizing: border-box;
+  text-decoration: none;
+  text-transform: capitalize;
+  font-family: "Bai Jamjuree", sans-serif;
+}
+
+i,
+button,
+input[type="submit"] {
+  cursor: pointer;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--headers-color);
+  margin-top: 2em;
+  font-weight: 600;
+}
+
+img {
+  max-width: 100%;
+}
+
+section {
+  padding: 1em;
+  padding-top: 3em;
+  text-align: center;
+}
+
+/* components */
+
+.container {
+  margin: auto;
+  padding: 0 0.5em;
+}
+@media (min-width: 800px) {
+  .container {
+    width: 90%;
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+    width: 1100px;
+  }
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.lowercase {
+  text-transform: lowercase;
+}
+
+.section-header {
+  margin-bottom: 5em;
+}
+
+.paragraph {
+  color: var(--parargraphs-color);
+  margin-top: 1em;
+  margin-bottom: 2em;
+}
+
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1em 2em;
+  max-width: 600px;
+  margin: auto;
+}
+
+.buttons button {
+  border-radius: 100vh;
+  -webkit-border-radius: 100vh;
+  -moz-border-radius: 100vh;
+  -ms-border-radius: 100vh;
+  -o-border-radius: 100vh;
+  padding: 1em 2em;
+  color: white;
+  letter-spacing: 1px;
+  font-weight: 600;
+  transition-duration: .4s;
+}
+
+.buttons button.ios-download {
+  background-color: var(--primary-color);
+}
+
+.buttons button.ios-download:hover {
+  background-color: var(--primary-color-active);
+  box-shadow: 2px 2px 3px var(--primary-color);
+}
+.buttons button.mac-download {
+  background-color: var(--secondary-color);
+}
+
+.buttons button.mac-download:hover {
+  background-color: var(--secondary-color-active);
+  box-shadow: 2px 2px 3px var(--secondary-color);
+}
+/* body styles */
+
+body {
+  background-image: url(/images/bg-header-desktop.png);
+  background-size: 100% 15%;
+  background-repeat: no-repeat;
+}
+
+/* advantage-1 */
+
+@media (min-width: 800px) {
+  .advantage-1 .section-details {
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+    gap: 3em;
+  }
+
+  .advantage-1 .section-details img {
+    max-width: 130%;
+    aspect-ratio: 2/1.4;
+    transform: translateX(-25%);
+    -webkit-transform: translateX(-25%);
+    -moz-transform: translateX(-25%);
+    -ms-transform: translateX(-25%);
+    -o-transform: translateX(-25%);
+  }
+
+  .advantage-1 .section-details .features-box {
+    text-align: left;
+  }
+}
+/* advantage-3 */
+
+.advantage-3 .section-details {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5em;
+}
+
+.advantage-3 .feature-box i {
+  font-size: 3rem;
+  color: var(--parargraphs-color);
+}
+
+/* companies */
+
+.companies {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4em;
+  justify-content: center;
+}
+
+/* footer */
+
+footer {
+  background-color: hsl(201, 11%, 95%);
+  margin-top: 4em;
+}
+
+footer .container {
+  padding: 2em;
+  text-align: center;
+  font-weight: 600;
+}
+
+footer .container img {
+  width: 50px;
+  aspect-ratio: 1;
+}
+
+footer .container ul.links {
+  list-style-type: none;
+  margin: 2em 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+:is(footer .container ul.links a,footer .container ul.social-links i) {
+  color: var(--headers-color);
+  transition-duration: .4s;
+}
+
+footer .container ul.social-links i {
+  margin: 0 0.3em;
+  font-size: 1.2rem;
+}
+:is(footer .container ul.links a,footer .container ul.social-links i):hover {
+  color: var(--primary-color);
+}
+@media (min-width: 800px) {
+  footer .container {
+    display: grid;
+    grid-template-columns: 15% 70% 15%;
+    justify-items: flex-start;
+    align-items: center;
+  }
+
+  footer .container ul.links {
+    flex-direction: row;
+    flex-wrap: wrap;
+    font-size: 1.2rem;
+  }
+}
