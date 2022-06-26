@@ -140,7 +140,23 @@ body {
   background-repeat: no-repeat;
 }
 
+/* Header */
+
+header {
+  text-align: center;
+  padding-top: 6em;
+}
+
+header img.logo-image {
+  width: 100px
+}
+
 /* advantage-1 */
+
+.advantage-1 .features-box .feature > span {
+  color: var(--headers-color);
+  font-weight: 700;
+}
 
 @media (min-width: 800px) {
   .advantage-1 .section-details {
@@ -174,6 +190,13 @@ body {
 .advantage-3 .feature-box i {
   font-size: 3rem;
   color: var(--parargraphs-color);
+}
+
+.advantage-3 .feature-box > span {
+  display: block;
+  margin: 1.5em 0 .5em;
+  color: var(--headers-color);
+  font-weight: 700;
 }
 
 /* companies */
@@ -210,16 +233,19 @@ footer .container ul.links {
   flex-direction: column;
   gap: 1em;
 }
-:is(footer .container ul.links a,footer .container ul.social-links i) {
+
+:is(footer .container ul.links a,footer .container ul.social-links li) {
   color: var(--headers-color);
   transition-duration: .4s;
 }
 
-footer .container ul.social-links i {
+footer .container ul.social-links li {
   margin: 0 0.3em;
   font-size: 1.2rem;
+  list-style: none;
+  display: inline;
 }
-:is(footer .container ul.links a,footer .container ul.social-links i):hover {
+:is(footer .container ul.links a,footer .container ul.social-links li):hover {
   color: var(--primary-color);
 }
 @media (min-width: 800px) {
